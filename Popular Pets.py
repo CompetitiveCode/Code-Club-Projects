@@ -1,17 +1,17 @@
 #!/bin/python3
 
-import pygal
+import pygal #To draw different type of charts and pie
 
-piechart = pygal.Pie()
-piechart.title = 'Favourite Pets'
-piechart.add('Dog', 6)
+piechart = pygal.Pie() #Created a Pie object
+piechart.title = 'Favourite Pets' #Gave that Pie Object a title
+piechart.add('Dog', 6) #Adding each piece in the Pie Chart with name and value
 piechart.add('Cat', 4)
 piechart.add('Hamster', 3)
 piechart.add('Fish', 2)
 piechart.add('Snake', 1)
-piechart.render()
+piechart.render() #To print that chart
 
-barchart = pygal.Bar()
+barchart = pygal.Bar() #Created a Bar object
 barchart.title = 'Favourite Sports'
 barchart.add('Cricket', 6)
 barchart.add('Football', 4)
@@ -24,7 +24,7 @@ piechart1 = pygal.Pie()
 piechart1.title = 'Favourite Series'
 barchart1 = pygal.Bar()
 barchart1.title = 'Favourite Series'
-file = open('series.txt','r')
+file = open('series.txt','r') #Reading data from a file
 for line in file.read().splitlines():
     if line:
         label,value=line.split('-')
